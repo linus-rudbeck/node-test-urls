@@ -8,7 +8,7 @@ import fs from 'fs';
 const PROGRAM = {
     urlsFile: './urls.txt',
 
-    
+
     /**
      * Initializes the application by reading URLs and checking them.
      * @returns {Promise<void>} A promise that resolves when the initialization is complete.
@@ -58,8 +58,9 @@ const PROGRAM = {
             if (response.status !== 200) {
                 console.log(`${url} has a status of ${response.status}`);
             }
-
-            console.log(`${url} is OK`);
+            else {
+                console.log(`${url} is OK`);
+            }
 
         } catch (error) {
             console.log('There was an error:', error);
