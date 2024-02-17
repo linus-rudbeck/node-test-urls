@@ -48,6 +48,10 @@ const PROGRAM = {
      * @throws {Error} An error if the URL cannot be checked.
      */
     async checkStatus(url) {
+        if (!url) {
+            return;
+        }
+
         try {
             const response = await fetch(url);
 
